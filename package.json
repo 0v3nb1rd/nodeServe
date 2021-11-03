@@ -1,7 +1,7 @@
 {
   "name": "NodeServe",
   "version": "1.0.0",
-  "description": "",
+  "description": "project for SoftServe task",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/0v3nb1rd/nodeServe/issues"
   },
-  "homepage": "https://github.com/0v3nb1rd/nodeServe#readme"
+  "homepage": "https://github.com/0v3nb1rd/nodeServe#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
 }
