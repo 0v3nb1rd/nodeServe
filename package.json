@@ -1,0 +1,20 @@
+{
+  "name": "NodeServe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0v3nb1rd/nodeServe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0v3nb1rd/nodeServe/issues"
+  },
+  "homepage": "https://github.com/0v3nb1rd/nodeServe#readme"
+}
