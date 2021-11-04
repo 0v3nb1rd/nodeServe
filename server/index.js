@@ -1,17 +1,17 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 8080;
+const path = require('path');
 const fs = require('fs');
+const port = process.env.PORT || 8080;
 
 app.use(express.static('./client')); // add static folder as middleware
 
-app.get('/:name', async (req, res) => {
-  res.header('Content-Type', 'application/json'); // Add app.json header
-  res.header('Access-Control-Allow-Origin', '*'); // allow CORS
-
+app.get('/:name', (req, res) => {
   const { name } = req.params;
   const usersFilePath = path.join(__dirname, name);
+
+  res.header('Content-Type', 'application/json'); // Add app.json header
+  res.header('Access-Control-Allow-Origin', '*'); // allow CORS
 
   if (fs.existsSync(usersFilePath)) {
     try {
