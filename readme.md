@@ -17,3 +17,5 @@ npm install
 ```
 npm run serve
 ```
+
+### in the root directory `./client` is a static folder
