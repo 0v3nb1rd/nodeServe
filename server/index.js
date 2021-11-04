@@ -22,7 +22,7 @@ app.get('/:name', async (req, res) => {
     }
   } else {
     res.status(404);
-    res.send('Sorry, file not found :-(');
+    res.send('404 Sorry, file not found :-(');
     console.log('404');
   }
 });
