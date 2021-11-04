@@ -4,7 +4,8 @@
   "description": "project for SoftServe task",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon ./server"
+    "serve": "node server",
+    "test": "nodemon server"
   },
   "repository": {
     "type": "git",
