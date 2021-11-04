@@ -1,8 +1,8 @@
 # webUi club node tasks
 
-### `localhost:3010` --> server adress
+### `localhost:8080` --> server adress
 
-### `/users` --> server response array with users
+### `/users.json` --> server response users.json
 
 ---
 
