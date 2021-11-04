@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json parser</title>
+    <style>
+      button {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        min-width: 220px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="btn">Download users info new</button>
+    <ul id="users"></ul>
+
+    <script>
+      const usersList = document.querySelector('#users');
+      const btn = document.querySelector('#btn');
+
+      // console.log(btn);
+      btn.addEventListener('click', () => {
+        async function getUsers() {
+          const fetchUsers = await fetch(
+            'http://localhost:8080/users.json'
+          ).then((el) => {
+            return el.json();
+          });
+          // console.log(fetchUsers);
+          return fetchUsers;
+        }
+
+        getUsers().then((data) => {
+          data.map((el) => {
+            // console.log(el);
+            usersList.innerHTML += createEl(el);
+          });
+        });
+
+        function createEl({ ...el }) {
+          return `
+					<li>
+        		<h2>User id: <span>${el.id}</span></h2>
+        		<div>
+          		<p>Name: <span>${el.first_name}</span></p>
+          		<p>Lastname: <span>${el.last_name}</span></p>
+          		<p>Email: <span>${el.email}</span></p>
+        		</div>
+        		<img src="${el.photo}" alt="image" />
+      		</li>
+					`;
+        }
+      });
+    </script>
+  </body>
+</html>
